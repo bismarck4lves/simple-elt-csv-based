@@ -12,7 +12,7 @@ class ETl:
     def __init__(self) -> None:
         self.HOST = "127.0.0.1"
         self.FILE_PATH = "./dump"
-        self.DB_NAME= "bright.db.sqlite3"
+        self.DB_NAME= "db.sqlite3"
         self.CONNECTION_STRING = f"sqlite:////{BASEDIR}/{self.DB_NAME}"
         self.engine = self.set_engine()
 
