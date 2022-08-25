@@ -35,7 +35,6 @@ class ETl:
             f"{self.FILE_PATH}/{file_name}",
             encoding='windows-1251'
         )
-        print(file_name)
         pd.DataFrame(data).to_sql(
             name=self.set_table_name(file_name),
             con=self.engine.connect(),
@@ -44,7 +43,7 @@ class ETl:
             chunksize=10000,
             method='multi'
         )
-        print(f"{file_name} migrado")
+        print(f"{file_name} imported")
 
 
 ETl().exec()
